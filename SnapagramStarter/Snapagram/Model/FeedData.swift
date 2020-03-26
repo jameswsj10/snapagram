@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 // Create global instance of the feed
 var feed = FeedData()
@@ -37,6 +39,8 @@ class Thread {
     func unreadCount() -> Int {
         return entries.count
     }
+    
+    
 }
 
 struct ThreadEntry {
@@ -90,3 +94,51 @@ class FeedData {
 }
 
 // write firebase functions here (pushing, pulling, etc.) 
+
+struct PostData {
+    let image: UIImage
+    let timestamp: Date
+    let caption: String
+    let user: String
+
+    }
+
+let db = Firestore.firestore()
+let storage = Storage.storage()
+
+
+ func threadAdd(thread: ThreadEntry) {
+    let imageID = UUID.init().uuidString
+    let user = thread.username
+    
+    let storageRef = storage.reference(withPath: "images/\(imageID).jpg")
+    guard let imageData = thread.image.jpegData(compressionQuality: 0.75) else {return}
+    let uploadMetadata = StorageMetadata.init()
+    uploadMetadata.contentType = "image/jpeg"
+    storageRef.putData(imageData)
+    
+    var ref = db.collection("threadEntry").addDocument(data: [
+        "imageID" : imageID,
+        "user": user])
+}
+
+func postAdd(post: Post) {
+    let imageID = UUID.init().uuidString
+    let timestamp = Timestamp(date: post.date)
+    
+    let storageRef = storage.reference(withPath: "images/\(imageID).jpg")
+    guard let imageData = post.image!.jpegData(compressionQuality: 0.75) else {return}
+    let uploadMetadata = StorageMetadata.init()
+    uploadMetadata.contentType = "image/jpeg"
+    storageRef.putData(imageData)
+    
+    var ref = db.collection("postEntry").addDocument(data: [
+        "imageID" : imageID,
+        "user": post.user,
+        "caption": post.caption,
+        "timeStamp": timestamp,
+        "location": post.location
+        ])
+}
+
+
