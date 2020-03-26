@@ -19,6 +19,8 @@
 		A238126A2415AF8D008E0F6C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23812692415AF8D008E0F6C /* PostTableViewCell.swift */; };
 		A238126C2415AFAB008E0F6C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238126B2415AFAB008E0F6C /* Constants.swift */; };
 		A238126E2415AFBC008E0F6C /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238126D2415AFBC008E0F6C /* FeedData.swift */; };
+		A4B514BAEF0CB10BAAF9839F /* Pods_Snapagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB968623FB82B3EE65978779 /* Pods_Snapagram.framework */; };
+		AC1254BC242C6F3400F627DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC1254BB242C6F3400F627DF /* GoogleService-Info.plist */; };
 		B01E353524185924009CB7A2 /* ChooseThreadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E353424185924009CB7A2 /* ChooseThreadCollectionViewCell.swift */; };
 		B0CD011D24178743008EFC00 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD011C24178743008EFC00 /* PreviewViewController.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		30438F0E24197A0A003FEBEF /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		4759DAD7242AA85F00539A28 /* UploadDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDetailVC.swift; sourceTree = "<group>"; };
+		7D534E092681DCFDB11430DC /* Pods-Snapagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapagram.debug.xcconfig"; path = "Target Support Files/Pods-Snapagram/Pods-Snapagram.debug.xcconfig"; sourceTree = "<group>"; };
+		85ECD9E25189C8FFEDC0FB7A /* Pods-Snapagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapagram.release.xcconfig"; path = "Target Support Files/Pods-Snapagram/Pods-Snapagram.release.xcconfig"; sourceTree = "<group>"; };
 		A238124B2415A9EF008E0F6C /* Snapagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A238124E2415A9EF008E0F6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A23812502415A9EF008E0F6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,8 +42,10 @@
 		A23812692415AF8D008E0F6C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A238126B2415AFAB008E0F6C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A238126D2415AFBC008E0F6C /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
+		AC1254BB242C6F3400F627DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B01E353424185924009CB7A2 /* ChooseThreadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseThreadCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0CD011C24178743008EFC00 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		CB968623FB82B3EE65978779 /* Pods_Snapagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B514BAEF0CB10BAAF9839F /* Pods_Snapagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,11 +78,23 @@
 			path = "Snap Tab";
 			sourceTree = "<group>";
 		};
+		78CD573FBC74477285D20A1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D534E092681DCFDB11430DC /* Pods-Snapagram.debug.xcconfig */,
+				85ECD9E25189C8FFEDC0FB7A /* Pods-Snapagram.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A23812422415A9EF008E0F6C = {
 			isa = PBXGroup;
 			children = (
 				A238124D2415A9EF008E0F6C /* Snapagram */,
 				A238124C2415A9EF008E0F6C /* Products */,
+				78CD573FBC74477285D20A1B /* Pods */,
+				E19BE71C2DFA938A357FB4FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +109,7 @@
 		A238124D2415A9EF008E0F6C /* Snapagram */ = {
 			isa = PBXGroup;
 			children = (
+				AC1254BB242C6F3400F627DF /* GoogleService-Info.plist */,
 				A238124E2415A9EF008E0F6C /* AppDelegate.swift */,
 				A23812502415A9EF008E0F6C /* SceneDelegate.swift */,
 				A23812542415A9EF008E0F6C /* Main.storyboard */,
@@ -131,6 +151,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E19BE71C2DFA938A357FB4FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB968623FB82B3EE65978779 /* Pods_Snapagram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A238125F2415A9F5008E0F6C /* Build configuration list for PBXNativeTarget "Snapagram" */;
 			buildPhases = (
+				092004F9BC5C91F645C0B890 /* [CP] Check Pods Manifest.lock */,
 				A23812472415A9EF008E0F6C /* Sources */,
 				A23812482415A9EF008E0F6C /* Frameworks */,
 				A23812492415A9EF008E0F6C /* Resources */,
+				D6420883FA7187F1CB7F66B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,12 +220,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				A238125B2415A9F5008E0F6C /* LaunchScreen.storyboard in Resources */,
+				AC1254BC242C6F3400F627DF /* GoogleService-Info.plist in Resources */,
 				A23812582415A9F5008E0F6C /* Assets.xcassets in Resources */,
 				A23812562415A9EF008E0F6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		092004F9BC5C91F645C0B890 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Snapagram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6420883FA7187F1CB7F66B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Snapagram/Pods-Snapagram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Snapagram/Pods-Snapagram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Snapagram/Pods-Snapagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A23812472415A9EF008E0F6C /* Sources */ = {
@@ -354,6 +427,7 @@
 		};
 		A23812602415A9F5008E0F6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D534E092681DCFDB11430DC /* Pods-Snapagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,6 +446,7 @@
 		};
 		A23812612415A9F5008E0F6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85ECD9E25189C8FFEDC0FB7A /* Pods-Snapagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

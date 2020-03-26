@@ -31,6 +31,7 @@ class UploadDetailVC: UIViewController, UICollectionViewDelegate, UICollectionVi
             thread.addEntry(threadEntry: currThreadEntry)
             selectedThread = nil
             print("uploaded via thread")
+            Snapagram.threadAdd(thread: currThreadEntry)
         // if feedlocation and feedcaption is filled in, upload to feed
         } else if let loc = feedLocation.text, let caption = feedCaption.text {
             let currPost = Post(location: loc, image: selectedImage, user: feed.username, caption: caption, date: Date())
@@ -38,6 +39,7 @@ class UploadDetailVC: UIViewController, UICollectionViewDelegate, UICollectionVi
             feedLocation.text = ""
             feedCaption.text = ""
             print("uploaded via post")
+            Snapagram.postAdd(post: currPost)
         } else {
             print("no threads or location selected")
         }
